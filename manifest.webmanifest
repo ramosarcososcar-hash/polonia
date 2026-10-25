@@ -1,0 +1,29 @@
+{
+  "name": "Polska ’26 · Kraków → Warszawa",
+  "short_name": "Polska ’26",
+  "description": "Guía del viaje a Polonia: itinerario, gastos compartidos, diario y maleta.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F1F1EC",
+  "theme_color": "#D4163C",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

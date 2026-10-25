@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Cambia estos dos emails por las cuentas de Google de los viajeros (en minúsculas)
+    function isTraveler() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email.lower() in ['email.de.oscar@gmail.com', 'email.de.alicia@gmail.com'];
+    }
+    match /trips/polonia26/{document=**} {
+      allow read, write: if isTraveler();
+    }
+  }
+}
