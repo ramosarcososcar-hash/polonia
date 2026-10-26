@@ -1,7 +1,7 @@
 // Service worker: guarda la guía para usarla sin conexión.
-const CACHE = "polska26-dm06";
+const CACHE = "polska26-dm07";
 const MAPC = "polska26-map"; // mapa del día: estilo, letras y teselas de OpenFreeMap
-const SHELL = ["./","index.html","sync.tngq55.js","weather.wx01.js","diary.dy02.js","suitcase.sc02.js","converter.cv02.js","daymap.dm06.js","manifest.webmanifest","manifest-ios.webmanifest","icons/icon-192.png","media/hero-poster.jpg","img/candles.webp","img/candles2.webp","img/krakow.webp","img/obwarzanek.webp","img/pierogi.webp","img/wawel.webp","img/wieliczka.webp","img/zurek.webp"];
+const SHELL = ["./","index.html","sync.tngq55.js","weather.wx01.js","diary.dy02.js","suitcase.sc02.js","converter.cv02.js","daymap.dm07.js","manifest.webmanifest","manifest-ios.webmanifest","icons/icon-192.png","media/hero-poster.jpg","img/candles.webp","img/candles2.webp","img/krakow.webp","img/obwarzanek.webp","img/pierogi.webp","img/wawel.webp","img/wieliczka.webp","img/zurek.webp"];
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE && k !== MAPC).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", (e) => {
