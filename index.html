@@ -26,6 +26,29 @@
 @media (min-width:768px){.pl-bx>.bx-br{display:none}.pl-bx>.bx-c{flex:1.7 1 0}.pl-bx>.bx-a{flex-basis:7rem}.pl-bx>.bx-k{flex:1 1 0}.pl-bx .bx-pl{display:inline}}
 /* «Quién debe a quién» del resumen en móviles muy estrechos: solo nombres */
 @media (max-width:379px){.pl-rel>span[title]{display:none}}
+
+/* r118: el ancho que cuenta es el de la hoja, y en rem (sigue al tamaño de texto elegido) */
+.pl-ps{container-type:inline-size;container-name:plps}
+.pl-pst>div{container-type:inline-size}
+.pl-pst .v{font-size:min(1.125rem,14cqi);line-height:1.25}
+@container plps (max-width:25rem){
+.pl-pst{grid-template-columns:minmax(0,1fr);gap:0;border-radius:.75rem;padding:0 .875rem;background:var(--surface-2)}
+.pl-pst>div{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;border-radius:0;padding:.7rem 0;background:none;border-bottom:1px solid var(--line);container-type:normal}
+.pl-pst>div:last-child{border-bottom:0}
+.pl-pst .v{margin-top:0;font-size:1.125rem}
+}
+.pl-ps .pl-rel{flex-wrap:wrap;row-gap:4px}
+.pl-bx{container-type:inline-size}
+.pl-bx>.bx-p{min-width:0;overflow:hidden}
+.pl-bx .bx-p .nm{min-width:0}
+@container (max-width:20rem){.pl-bx .bx-p .nm{display:none}}
+/* Cabecera de la app en móviles estrechos o con texto grande: el nombre se recorta antes que salirse de la pantalla */
+@media (max-width:379px){
+header .float-bar>button:first-child{flex-shrink:1;min-width:0;overflow:hidden}
+header .float-bar>button:first-child>*:last-child{min-width:0;overflow:hidden}
+header .float-bar>button:first-child>*:last-child>*{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+header .float-bar>.ml-auto{flex-shrink:0;gap:6px}
+}
 </style></head><body>
 <title>Polska ’26</title>
 <meta name="description" content="Guía interactiva Kraków → Warszawa, 28 oct – 4 nov 2026">
