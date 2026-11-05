@@ -1,5 +1,5 @@
 // Service worker: guarda la guía para usarla sin conexión.
-const CACHE = "polska26-r131";
+const CACHE = "polska26-r132";
 const MAPC = "polska26-map"; // mapa del día: estilo, letras y teselas de OpenFreeMap
 const MEDIA = "polska26-media"; // fotos y MapLibre: aparte, para no perderlos al publicar una versión nueva
 const SHELL = ["./","index.html","sync.tngq55.js","weather.wx01.js","diary.dy02.js","suitcase.sc02.js","converter.cv02.js","daymap.dm56.js","manifest.webmanifest","manifest-ios.webmanifest","icons/icon-192.png","media/hero-poster.jpg","img/candles.webp","img/candles2.webp","img/krakow.webp","img/obwarzanek.webp","img/pierogi.webp","img/wawel.webp","img/wieliczka.webp","img/zurek.webp"];
